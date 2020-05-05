@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cloud Value Calculator</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <header>Cloud Value Calculator</header>
+</head>
+
+<body>
+    <section> <!--Welcome/Instructions for Calculator-->
+        <p>Welcome to the Cloud Value Calculator! This Calculator will compare your current costs for your server and
+            storage with what Google Cloud has to offer.</p>
+    </section>
+    <form oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
+        <table border=1 style="float: left;"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
+            <tr> 
+                <th>Current Values</th> 
+                <td>Cloud Values</td>
+            </tr>
+            <tr>
+                <td># of Servers<br> <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=
+                <output name="aa" for="custemerServers"></output></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
+                <output name="bb" for="custemerStorage"></output></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">= $
+                <output name="cc" for="custemerStorage"></output></td>
+                <td><br>62</td>
+            </tr>
+            <tr> 
+                <td> Cost per TB<br><input type="range" id="custemerCostPerStorage" name="d" value="50" oninput="fn1()">= $
+                <output name="dd" for="custemerStorage"></output></td>
+                <td><br>7</td>
+            </tr>
+        </table>
+    </form>
+        <table border=1 style="float: right;"> <!--Table showing comparison of current costs and Cloud costs-->
+            <tr>
+                <th>Cost Comparison</th>
+                <td>Current Cost</td>
+                <td>Cloud Cost</td>
+                <td>Savings</td>
+            </tr>
+            <tr>
+                <td>Servers</td>
+                <td id="serverCost"></td>
+                <td id="cloudServerCost"></td>
+                <td id="serverSavings"></td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td id="storageCost"></td>
+                <td id="cloudStorageCost"></td>
+                <td id="storageSavings"></td>
+            </tr>
+        </table>
+        <script src="./Calculator.js"> </script>
+    </body>
+</html>

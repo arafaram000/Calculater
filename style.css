@@ -1,0 +1,24 @@
+header {
+    background-color: #4885ed; color: black;
+    font-size: 50px; text-align: center;
+    padding: 50px; font-weight: bold;
+}
+body {
+    background-color: #3cba54;
+    height: 300px;
+}
+
+main {
+    background-color: #db3236;
+    font-weight: bold;
+    height: 300px; width: 440px;
+    float: left;
+}
+
+section {
+    background-color: #f4c20d; 
+    color: black;
+    font-size: 18px; text-align: left;
+    padding: 50px; float: right;
+    height: 300px; width: 700px;
+}
