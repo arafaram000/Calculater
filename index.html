@@ -18,33 +18,49 @@
     <form oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
         <table border=1 style="float: left;"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
             <tr> 
-                <th>Current Values</th> 
+                <th>Current Values</th>
+                <td>Types</td>
                 <td>Cloud Values</td>
             </tr>
             <tr>
                 <td># of Servers<br> <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=
                 <output name="aa" for="custemerServers">50</output></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
-                <output name="bb" for="custemerStorage">50</output></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">=$
-                <output name="cc" for="custemerStorage">50</output></td>
-                <td><br><select id="cars">
+                <td><select id="cars">
                          <option value="volvo">Volvo</option>
                          <option value="saab">Saab</option>
                          <option value="opel">Opel</option>
                          <option value="audi">Audi</option>
                          </select></td>
+                <td><select id="cars">
+                         <option value="volvo">Volvo</option>
+                         <option value="saab">Saab</option>
+                         <option value="opel">Opel</option>
+                         <option value="audi">Audi</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
+                <output name="bb" for="custemerStorage">50</output></td>
+                <td><select id="cars">
+                         <option value="volvo">Volvo</option>
+                         <option value="saab">Saab</option>
+                         <option value="opel">Opel</option>
+                         <option value="audi">Audi</option>
+                         </select></td>
+                <td><select id="cars">
+                         <option value="volvo">Volvo</option>
+                         <option value="saab">Saab</option>
+                         <option value="opel">Opel</option>
+                         <option value="audi">Audi</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">=$
+                    <output name="cc" for="custemerStorage">50</output></td>
             </tr>
             <tr> 
                 <td> Cost per TB<br><input type="range" id="custemerCostPerStorage" name="d" value="50" oninput="fn1()">=$
                 <output name="dd" for="custemerStorage">50</output></td>
-                <td><br> $7</td>
             </tr>
         </table>
     </form>
