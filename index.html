@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <title>Cloud Value Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <header>Cloud Value Calculator</header>
 </head>
 
@@ -16,70 +19,74 @@
     </main>
     <section>
     <form oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
-        <table border=1 style="float: left;"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
-            <tr> 
-                <th>Current Values</th>
-                <td>Types</td>
-                <td>Cloud Values</td>
-            </tr>
-            <tr>
-                <td># of Servers<br> <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=
-                <output name="aa" for="custemerServers">50</output></td>
-                <td><select id="cars">
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
-                <output name="bb" for="custemerStorage">50</output></td>
-                <td><select id="cars">
-                         <option value="volvo">Volvo</option>
-                         <option value="saab">Saab</option>
-                         <option value="opel">Opel</option>
-                         <option value="audi">Audi</option>
-                         </select></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">=$
-                    <output name="cc" for="custemerStorage">50</output></td>
-            </tr>
-            <tr> 
-                <td> Cost per TB<br><input type="range" id="custemerCostPerStorage" name="d" value="50" oninput="fn1()">=$
-                <output name="dd" for="custemerStorage">50</output></td>
-            </tr>
-        </table>
+        <div style="float: left">
+            <table border=1 style="float: left;"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
+                <tr> 
+                    <th>Current Values</th>
+                    <td>Types</td>
+                    <td>Cloud Values</td>
+                </tr>
+                <tr>
+                    <td># of Servers<br> <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=
+                    <output name="aa" for="custemerServers">50</output></td>
+                    <td><select id="cars">
+                             <option value="volvo">Volvo</option>
+                             <option value="saab">Saab</option>
+                             <option value="opel">Opel</option>
+                             <option value="audi">Audi</option>
+                             </select></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
+                    <output name="bb" for="custemerStorage">50</output></td>
+                    <td><select id="cars">
+                             <option value="volvo">Volvo</option>
+                             <option value="saab">Saab</option>
+                             <option value="opel">Opel</option>
+                             <option value="audi">Audi</option>
+                             </select></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">=$
+                        <output name="cc" for="custemerStorage">50</output></td>
+                </tr>
+                <tr> 
+                    <td> Cost per TB<br><input type="range" id="custemerCostPerStorage" name="d" value="50" oninput="fn1()">=$
+                    <output name="dd" for="custemerStorage">50</output></td>
+                </tr>
+            </table>
+        </div>
     </form>
-        <table border=1 style="float: right;"> <!--Table showing comparison of current costs and Cloud costs-->
-            <tr>
-                <th>Cost Comparison</th>
-                <td>Current Cost</td>
-                <td>Cloud Cost</td>
-                <td>Savings</td>
-            </tr>
-            <tr>
-                <td>Servers</td>
-                <td id="serverCost"></td>
-                <td id="cloudServerCost"></td>
-                <td id="serverSavings"></td>
-            </tr>
-            <tr>
-                <td>Storage</td>
-                <td id="storageCost"></td>
-                <td id="cloudStorageCost"></td>
-                <td id="storageSavings"></td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td id="custemerTotal"></td>
-                <td id="cloudTotal"></td>
-                <td id="savingsTotal"></td>
-            </tr>
-        </table>
+        <div style="float: right">
+            <table border=1 style="float: right;"> <!--Table showing comparison of current costs and Cloud costs-->
+                <tr>
+                    <th>Cost Comparison</th>
+                    <td>Current Cost</td>
+                    <td>Cloud Cost</td>
+                    <td>Savings</td>
+                </tr>
+                <tr>
+                    <td>Servers</td>
+                    <td id="serverCost"></td>
+                    <td id="cloudServerCost"></td>
+                    <td id="serverSavings"></td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td id="storageCost"></td>
+                    <td id="cloudStorageCost"></td>
+                    <td id="storageSavings"></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="custemerTotal"></td>
+                    <td id="cloudTotal"></td>
+                    <td id="savingsTotal"></td>
+                </tr>
+            </table>
+        </div>
     </section>
     <link rel="stylesheet" href="Style.css">
     <script src="./Calculator.js"> </script>
