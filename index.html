@@ -20,7 +20,7 @@
     <section>
     <form oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
         <div style="float: left">
-            <table border=1 style="float: left;"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
+            <table class="table table-striped table-bordered table-sm"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
                 <tr> 
                     <th>Current Values</th>
                     <td>Types</td>
@@ -60,7 +60,7 @@
         </div>
     </form>
         <div style="float: right">
-            <table border=1 style="float: right;"> <!--Table showing comparison of current costs and Cloud costs-->
+            <table class="table table-dark"> <!--Table showing comparison of current costs and Cloud costs-->
                 <tr>
                     <th>Cost Comparison</th>
                     <td>Current Cost</td>
@@ -79,7 +79,7 @@
                     <td id="cloudStorageCost"></td>
                     <td id="storageSavings"></td>
                 </tr>
-                <tr>
+                <tr class="table-warning">
                     <td>Total</td>
                     <td id="custemerTotal"></td>
                     <td id="cloudTotal"></td>
@@ -88,7 +88,10 @@
             </table>
         </div>
     </section>
-    <link rel="stylesheet" href="Style.css">
+    <!--<link rel="stylesheet" href="Style.css">-->
     <script src="./Calculator.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
