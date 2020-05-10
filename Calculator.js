@@ -35,4 +35,4 @@ function fn1()
             document.getElementById("custemerTotal").innerHTML=(custemerTotal);
             document.getElementById("cloudTotal").innerHTML=(cloudTotal);
             document.getElementById("savingsTotal").innerHTML=(savingsTotal);
-
+         }
