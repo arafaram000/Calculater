@@ -11,8 +11,8 @@ function fn1()
             custemerCostPerServers = parseInt(custemerCostPerServers);
             custemerCostPerStorage = parseInt(custemerCostPerStorage);
             // Constants given to us by google
-            const googleCostPerServer = 62;
-            const googleCostPerStorage = 7;
+            let googleCostPerServer = document.getElementById("serverType").value,
+                googleCostPerStorage = document.getElementById("storagType").value;
             // Calculating cost per server and cost per TB
             let custemerServerCost = custemerServers * custemerCostPerServers;
             let custemerStorageCost = custemerStorage * custemerCostPerStorage;
