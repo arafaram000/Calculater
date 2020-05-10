@@ -75,13 +75,13 @@
                     </tr>
                     <tr>
                         <td># of Servers<br> <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=<output name="aa" for="custemerServers">50</output></td>
-                          <td><select id="serverType">
+                          <td><select id="serverType" oninput="coolguy.value=parseInt(serverType.value)">
                              <option value="2">e2-standard-2</option>
                              <option value="4">e2-standard-4</option>
                               <option value="8">e2-standard-8</option>
                              <option value="16">e2-standard-16</option>
                         </select></td>
-                        <td></td>
+                              <td><output name="coolguy">2</output></td>
                     </tr>
                     <tr>
                         <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
