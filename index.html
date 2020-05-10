@@ -74,7 +74,7 @@
                         <td>Cloud Values</td>
                     </tr>
                     <tr>
-                        <td># of Servers <input type="range" max="500" min="1" id="custemerServers" name="a" value="250" oninput="fn1()">=<output name="aa" for="custemerServers">50</output></td>
+                        <td># of Servers <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=<output name="aa" for="custemerServers">50</output></td>
                           <td><select id="serverType" oninput="coolguy.value=parseInt(serverType.value),fn1()">
                              <option value="48.24">e2-standard-2</option>
                              <option value="96.48">e2-standard-4</option>
@@ -95,8 +95,8 @@
                         <td>$<output id="coolgirl" name="coolgirl">26</output></td>
                     </tr>
                     <tr>
-                        <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">=$
-                            <output name="cc" for="custemerStorage">50</output></td>
+                        <td> Cost Per Server<br><input type="range" max="500" min="1" id="custemerCostPerServers" name="c" value="250" oninput="fn1()">=$
+                            <output name="cc" for="custemerStorage">250</output></td>
                     </tr>
                     <tr> 
                         <td> Cost per TB<br><input type="range" id="custemerCostPerStorage" name="d" value="50" oninput="fn1()">=$
