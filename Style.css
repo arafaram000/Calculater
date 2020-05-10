@@ -78,7 +78,9 @@ footer {
         text-align: center;
     }
 /*</style>*/
-
+output {
+    display: inline;
+}
 main {
     /*background-color: #db3236;*/
     font-weight: bold;
