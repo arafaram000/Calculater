@@ -11,8 +11,8 @@ function fn1()
             custemerCostPerServers = parseInt(custemerCostPerServers);
             custemerCostPerStorage = parseInt(custemerCostPerStorage);
             // Constants given to us by google
-            let googleCostPerServer = document.getElementById("severType").value,
-                googleCostPerStorage = document.getElementById("storageType").value;
+            let googleCostPerServer = document.getElementById("coolguy").value,
+                googleCostPerStorage = document.getElementById("coolgirl").value;
             // Calculating cost per server and cost per TB
             let custemerServerCost = custemerServers * custemerCostPerServers;
             let custemerStorageCost = custemerStorage * custemerCostPerStorage;
@@ -36,4 +36,3 @@ function fn1()
             document.getElementById("cloudTotal").innerHTML=(cloudTotal);
             document.getElementById("savingsTotal").innerHTML=(savingsTotal);
          }
-window.alert("fuckyou");
