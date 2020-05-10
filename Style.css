@@ -1,13 +1,3 @@
-header {
-    /*background-color: #4885ed;*/
-    background-color: #cccccc;
-    color: black;
-    font-size: 50px;
-    text-align: center;
-    padding: 30px;
-    font-weight: bold;
-}
-
 body {
     background-color: #3cba54;
     height: 600px;
@@ -20,7 +10,7 @@ nav {
 }
 
 footer {
-    background-color: red;
+    background-color: #F4B400;
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -47,53 +37,6 @@ footer {
     .row.content {height:auto;} 
   }
 
-  
-
-/*<style>
-    {
-        box-sizing: border-box;
-    }*/
-
-/* Create two equal columns that floats next to each other */
-    .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-    }
-
-/* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: red;
-        color: white;
-        text-align: center;
-    }
-/*</style>*/
 output {
     display: inline;
-}
-main {
-    /*background-color: #db3236;*/
-    font-weight: bold;
-    height: 500px; width: 1280px;
-    color: black;
-    padding-bottom: 25px;
-}
-
-section {
-    background-color: #f4c20d;
-    /*background-color: #4885ed;*/
-    color: black;
-    font-size: 18px; text-align: left;
-    padding: 50px;
-    height: 1000px; width: 1000px;
 }
