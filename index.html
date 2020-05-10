@@ -81,18 +81,18 @@
                               <option value="8">e2-standard-8</option>
                              <option value="16">e2-standard-16</option>
                         </select></td>
-                              <td><output name="coolguy">2</output></td>
+                              <td>$<output name="coolguy">2</output></td>
                     </tr>
                     <tr>
                         <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
                         <output name="bb" for="custemerStorage">50</output></td>
-                        <td><select id="storageType">
+                        <td><select id="storageType" oninput="coolgirl.value=parseInt(storageType.value)">
                              <option value="26">Standard Storage</option>
                              <option value="10">Nearline Storage</option>
                              <option value="7">Coldline Storage</option>
                              <option value="4">Archive Storage</option>
                                 </select></td>
-                        <td></td>
+                        <td>$<output name="coolgirl">26</output></td>
                     </tr>
                     <tr>
                         <td> Cost Per Server<br><input type="range" id="custemerCostPerServers" name="c" value="50" oninput="fn1()">=$
