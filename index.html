@@ -75,7 +75,7 @@
                     </tr>
                     <tr>
                         <td># of Servers <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=<output name="aa" for="custemerServers">50</output></td>
-                          <td><select id="serverType" oninput="coolguy.value=parseInt(serverType.value)">
+                          <td><select id="serverType" oninput="coolguy.value=parseInt(serverType.value),fn1()">
                              <option value="2">e2-standard-2</option>
                              <option value="4">e2-standard-4</option>
                               <option value="8">e2-standard-8</option>
@@ -86,7 +86,7 @@
                     <tr>
                         <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
                         <output name="bb" for="custemerStorage">50</output></td>
-                        <td><select id="storageType" oninput="coolgirl.value=parseInt(storageType.value)">
+                        <td><select id="storageType" oninput="coolgirl.value=parseInt(storageType.value),fn1()">
                              <option value="26">Standard Storage</option>
                              <option value="10">Nearline Storage</option>
                              <option value="7">Coldline Storage</option>
