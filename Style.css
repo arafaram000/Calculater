@@ -1,20 +1,88 @@
 header {
     /*background-color: #4885ed;*/
+    background-color: #cccccc;
     color: black;
-    font-size: 50px; text-align: center;
-    padding: 50px; font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
 }
 
 body {
     background-color: #3cba54;
-    height: 300px;
+    height: 600px;
     padding: 50px;
 }
+
+nav {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: red;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+
+  
+
+/*<style>
+    {
+        box-sizing: border-box;
+    }*/
+
+/* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+
+/* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+/*</style>*/
 
 main {
     /*background-color: #db3236;*/
     font-weight: bold;
-    height: 300px; width: 1000px;
+    height: 500px; width: 1280px;
     color: black;
     padding-bottom: 25px;
 }
@@ -25,5 +93,5 @@ section {
     color: black;
     font-size: 18px; text-align: left;
     padding: 50px;
-    height: 1000px; /*width: 1000px;*/
+    height: 1000px; width: 1000px;
 }
