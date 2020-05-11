@@ -40,3 +40,6 @@ footer {
 output {
     display: inline;
 }
+td {
+     display: inline;
+}
