@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <title>Cloud Value Calculator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,152 +16,184 @@
    </style>
 </head>
 
-<body>
+  <body>
     <!--Header-->
     <div class="jumbotron text-center">
-        <h1>Cloud Value Calculator</h1>
+      <h1>Cloud Value Calculator</h1>
     </div>
     <!--Navbar At Top-->
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#">Logo</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="details.html">Details</a></li>
-              <li><a href="credits.html">Credits</a></li>
-            </ul>
-            <!--<ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>-->
-          </div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a style="background-color: #4169e1; color: gold" class="navbar-brand" href="#">WHS</a>
         </div>
-    </nav>
-    <div class="container-fluid text-center">    
-        <div class="row content">
-          <div class="col-sm-2 sidenav">
-            <p>The following links provide more information for the pricing options that Google Cloud has to offer.</p>
-            <p><a href="https://cloud.google.com/compute/all-pricing#e2_machine-types" target="blank">Server Pricing</a></p>
-            <p><a href="https://cloud.google.com/storage/pricing#storage-pricing" target="blank">Storage Pricing</a></p>
-          </div>
-          <div class="col-sm-5 text-left"> 
-            <h1>Welcome</h1>
-            <p>Welcome to the Cloud Value Calculator! This Calculator will compare your current costs for your server and storage with what Google Cloud has to offer.</p>
-            <hr>
-          </div>
-          <div class="col-sm-5 text-left"> 
-            <h1>Instructions</h1>
-            <p>To use this calculator, simply drag the sliders to the value that your business uses for the Cost/Amount of Servers and Storage. The calculator will automatically display a comparison between what you are currently paying, along with what you would be paying with Google Cloud.</p>
-            <hr>
-          </div>
-          <div class="col-sm-5 text-left"> 
-            <h1>Current Values</h1>
-            <form oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
-                <table class="table table-striped table-bordered table-sm"> <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
-                    <tr> 
-                        <th>Current Values</th>
-                        <td>Types</td>
-                        <td>Cloud Values</td>
-                    </tr>
-                    <tr>
-                        <td># of Servers <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">=<output name="aa" for="custemerServers">50</output></td>
-                          <td><select id="serverType" oninput="coolguy.value=parseInt(serverType.value),fn1()">
-                             <option value="48.24">e2-standard-2</option>
-                             <option value="96.48">e2-standard-4</option>
-                              <option value="192.96">e2-standard-8</option>
-                             <option value="385.92">e2-standard-16</option>
-                        </select></td>
-                          <td>$<output display="inline" id="coolguy" name="coolguy">48</output></td>
-                    </tr>
-                    <tr>
-                        <td># of Storage (TB) <br><input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">=
-                        <output name="bb" for="custemerStorage">50</output></td>
-                        <td><select id="storageType" oninput="coolgirl.value=parseInt(storageType.value),fn1()">
-                             <option value="26">Standard Storage</option>
-                             <option value="10">Nearline Storage</option>
-                             <option value="7">Coldline Storage</option>
-                             <option value="4">Archive Storage</option>
-                                </select></td>
-                        <td><span display=inline>$<output id="coolgirl" name="coolgirl" style="display:inline">26</output></span></td>
-                    </tr>
-                    <tr>
-                        <td> Cost Per Server<br><input type="range" max="500" min="1" id="custemerCostPerServers" name="c" value="250" oninput="fn1()">=$
-                            <output name="cc" for="custemerStorage">250</output></td>
-                    </tr>
-                    <tr> 
-                        <td> Cost per TB<br><input type="range" id="custemerCostPerStorage" name="d" value="50" oninput="fn1()">=$
-                        <output name="dd" for="custemerStorage">50</output></td>
-                    </tr>
-                </table>
-            </form>
-            <hr>
-          </div>
-          <div class="col-sm-5 text-left"> 
-            <h1>Outputs</h1>
-            <table class="table"> <!--Table showing comparison of current costs and Cloud costs-->
-                <tr>
-                    <th>Cost Comparison</th>
-                    <td>Current Cost</td>
-                    <td>Cloud Cost</td>
-                    <!--<td>Savings</td>-->
-                </tr>
-                <tr>
-                    <td>Servers</td>
-                    <td id="serverCost"></td>
-                    <td id="cloudServerCost"></td>
-                    <!--<td id="serverSavings"></td>-->
-                </tr>
-                <tr>
-                    <td>Storage</td>
-                    <td id="storageCost"></td>
-                    <td id="cloudStorageCost"></td>
-                    <!--<td id="storageSavings"></td>-->
-                </tr>
-                <tr class="table-danger">
-                    <td>Total</td>
-                    <td id="custemerTotal"></td>
-                    <td id="cloudTotal"></td>
-                    <!--<td id="savingsTotal"></td>-->
-                </tr>
-            </table>
-            <table class="table" style="background-color: #4885ed; color: white;">
-                <tr>
-                    <td></td>
-                    <td>Servers</td>
-                    <td>Storage</td>
-                    <td>Total</td>
-                </tr>
-                <tr>
-                    <td>Savings</td>
-                    <td id="serverSavings"></td>
-                    <td id="storageSavings"></td>
-                    <td id="savingsTotal"></td>
-                </tr>
-            </table>
-          </div>
-          <!--<div class="col-sm-2 sidenav">
-            <div class="well">
-              <p>ADS</p>
-            </div>
-            <div class="well">
-              <p>ADS</p>
-            </div>
-          </div>-->
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="credits.html">Credits</a></li>
+          </ul>
+          <!--<ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>-->
         </div>
       </div>
-      <footer class="container-fluid text-center">
-        <h4><strong>Google Cloud x Wayzata Compass</strong></h4>
-      </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </nav>
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p>The following links provide more information for the pricing options that Google Cloud has to offer.</p>
+          <p><a href="https://cloud.google.com/compute/all-pricing#e2_machine-types" target="blank">Server Pricing</a></p>
+          <p><a href="https://cloud.google.com/storage/pricing#storage-pricing" target="blank">Storage Pricing</a></p>
+        </div>
+        <div class="col-sm-5 text-left">
+          <h1>Welcome</h1>
+          <p>Welcome to the Cloud Value Calculator! This Calculator will compare your current costs for your server and
+            storage with what Google Cloud has to offer.</p>
+          <hr>
+        </div>
+        <div class="col-sm-5 text-left">
+          <h1>Instructions</h1>
+          <p>To use this calculator, simply drag the sliders to the value that your business uses for the Cost/Amount of
+            Servers and Storage. The calculator will automatically display a comparison between what you are currently
+            paying, along with what you would be paying with Google Cloud.</p>
+          <hr>
+        </div>
+        <div class="col-sm-5 text-left">
+          <h1>Inputs</h1>
+          <form
+            oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
+            <table class="table table-striped table-bordered">
+              <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
+              <tr>
+                <th class="thead-dark">Current Costs</th>
+                <th>Cloud Options</th>
+                <th>Cloud Costs</th>
+              </tr>
+              <tr>
+                <td display="inline">
+                  <strong># of Servers</strong>
+                  <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">
+                  <output style="float:right" name="aa" for="custemerServers">50</output>
+                </td>
+                <td>
+                  <strong>Server Options</strong><br>
+                  <select id="serverType" oninput="coolguy.value=parseInt(serverType.value),fn1()">
+                    <option value="48.24">e2-standard-2</option>
+                    <option value="96.48">e2-standard-4</option>
+                    <option value="192.96">e2-standard-8</option>
+                    <option value="385.92">e2-standard-16</option>
+                  </select>
+                  <br>
+                </td>
+                <td>
+                  <strong>Cost Per Server ($)</strong><br>
+                  <output style="float: right" id="coolguy" name="coolguy">48</output>
+                </td>
+              </tr>
+              <tr>
+                <td display="inline">
+                  <strong># of Storage (TB)</strong>
+                  <input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">
+                  <output style="float: right" name="bb" for="custemerStorage">50</output></td>
+                <td><strong>Storage Options</strong><br><select id="storageType"
+                    oninput="coolgirl.value=parseInt(storageType.value),fn1()">
+                    <option value="26">Standard Storage</option>
+                    <option value="10">Nearline Storage</option>
+                    <option value="7">Coldline Storage</option>
+                    <option value="4">Archive Storage</option>
+                  </select></td>
+                <td><strong>Cost Per TB ($)</strong><br><span display=inline><output style="float: right" id="coolgirl" name="coolgirl">26</output></span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Cost Per Server ($)</strong><input type="range" max="500" min="1" id="custemerCostPerServers"
+                    name="c" value="250" oninput="fn1()">
+                  <output style="float: right" name="cc" for="custemerStorage">250</output></td>
+              </tr>
+              <tr>
+                <td><strong>Cost per TB ($)</strong><input type="range" id="custemerCostPerStorage" name="d" value="50"
+                    oninput="fn1()">
+                  <output style="float: right" name="dd" for="custemerStorage">50</output></td>
+              </tr>
+            </table>
+          </form>
+          <hr>
+        </div>
+        <div class="col-sm-5 text-left">
+          <h1>Outputs</h1>
+          <table class="table">
+            <!--Table showing comparison of current costs and Cloud costs-->
+            <tr>
+              <th>Cost Comparison</th>
+              <td>Current Cost</td>
+              <td>Cloud Cost</td>
+              <!--<td>Savings</td>-->
+            </tr>
+            <tr>
+              <td>Servers</td>
+              <td id="serverCost"></td>
+              <td id="cloudServerCost"></td>
+              <!--<td id="serverSavings"></td>-->
+            </tr>
+            <tr>
+              <td>Storage</td>
+              <td id="storageCost"></td>
+              <td id="cloudStorageCost"></td>
+              <!--<td id="storageSavings"></td>-->
+            </tr>
+            <tr class="table-danger">
+              <td>Total</td>
+              <td id="custemerTotal"></td>
+              <td id="cloudTotal"></td>
+              <!--<td id="savingsTotal"></td>-->
+            </tr>
+          </table>
+          <table class="table" style="background-color: #4885ed; color: white;">
+            <tr>
+              <td></td>
+              <td>Servers</td>
+              <td>Storage</td>
+              <td>Total</td>
+            </tr>
+            <tr>
+              <td>Savings</td>
+              <td id="serverSavings"></td>
+              <td id="storageSavings"></td>
+              <td id="savingsTotal"></td>
+            </tr>
+          </table>
+        </div>
+        <!--<div class="col-sm-2 sidenav">
+              <div class="well">
+                <p>ADS</p>
+              </div>
+              <div class="well">
+                <p>ADS</p>
+              </div>
+            </div>-->
+      </div>
+    </div>
+    <footer class="container-fluid text-center">
+      <!--<h4><strong>Google Cloud x Wayzata Compass</strong></h4>-->
+      <img class="responsive" src="https://www.wayzataschools.org/uploaded/WHS/WHS_CompassLogos_CMYW_tagline.png">
+      <img class="responsive" src=https://www.gstatic.com/devrel-devsite/prod/va70c25da2af7c102a85bdfc215259d86fc5b2e57f33cbc810a173f52e333a7a1/cloud/images/cloud-logo.svg>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
     <script src="./Calculator.js"> </script>
-    </body>
+  </body>
+
 </html>

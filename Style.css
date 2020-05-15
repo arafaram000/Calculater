@@ -10,7 +10,8 @@ nav {
 }
 
 footer {
-  background-color: #F4B400;
+  background-color: silver;
+  border-top: 1px;
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -39,4 +40,9 @@ footer {
 
 output {
   display: inline;
+}
+
+img {
+  width: 25%;
+  height: 10%;
 }
