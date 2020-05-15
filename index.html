@@ -5,21 +5,17 @@
     <title>Cloud Value Calculator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="Style.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-   output {
-     display: inline
-   }
-   </style>
   </head>
 
   <body>
     <!--Header-->
     <div class="jumbotron text-center">
-      <h1>Cloud Value Calculator</h1>
+      <h1 style="font-weight: bold">Cloud Value Calculator</h1>
     </div>
     <!--Navbar At Top-->
     <nav class="navbar navbar-inverse">
@@ -55,31 +51,27 @@
           <h1>Welcome</h1>
           <p>Welcome to the Cloud Value Calculator! This Calculator will compare your current costs for your server and
             storage with what Google Cloud has to offer.</p>
-          <hr>
         </div>
         <div class="col-sm-5 text-left">
           <h1>Instructions</h1>
-          <p>To use this calculator, simply drag the sliders to the value that your business uses for the Cost/Amount of
-            Servers and Storage. The calculator will automatically display a comparison between what you are currently
-            paying, along with what you would be paying with Google Cloud.</p>
-          <hr>
+          <p>To use this calculator, simply drag the sliders to the value that your business uses for the Cost/Amount of Servers and Storage, and choose the type of Cloud Servers and Cloud Storage. The calculator will automatically display a comparison between what you are currently paying, along with what you would be paying with Google Cloud. For more details, please take a look at the links on the left.</p>
         </div>
         <div class="col-sm-5 text-left">
-          <h1>Inputs</h1>
+          <h1>Server and Storage Costs</h1>
           <form
             oninput="aa.value=parseInt(a.value),bb.value=parseInt(b.value),cc.value=parseInt(c.value),dd.value=parseInt(d.value)">
             <table class="table table-striped table-bordered">
               <!--Table for user to input values for their current costs. Table also shows the cloud costs per server/TB-->
               <tr>
-                <th class="thead-dark">Current Costs</th>
+                <th>Current Costs</th>
                 <th>Cloud Options</th>
                 <th>Cloud Costs</th>
               </tr>
               <tr>
-                <td display="inline">
+                <td>
                   <strong># of Servers</strong>
                   <input type="range" id="custemerServers" name="a" value="50" oninput="fn1()">
-                  <output style="float:right" name="aa" for="custemerServers">50</output>
+                  =<output name="aa" for="custemerServers">50</output>
                 </td>
                 <td>
                   <strong>Server Options</strong><br>
@@ -92,15 +84,15 @@
                   <br>
                 </td>
                 <td>
-                  <strong>Cost Per Server ($)</strong><br>
-                  <output style="float: right" id="coolguy" name="coolguy">48</output>
+                  <strong>Cost Per Server</strong><br>
+                  =$<output id="coolguy" name="coolguy">48</output>
                 </td>
               </tr>
               <tr>
                 <td display="inline">
                   <strong># of Storage (TB)</strong>
                   <input type="range" id="custemerStorage" name="b" value="50" oninput="fn1()">
-                  <output style="float: right" name="bb" for="custemerStorage">50</output></td>
+                  =<output name="bb" for="custemerStorage">50</output></td>
                 <td><strong>Storage Options</strong><br><select id="storageType"
                     oninput="coolgirl.value=parseInt(storageType.value),fn1()">
                     <option value="26">Standard Storage</option>
@@ -108,26 +100,26 @@
                     <option value="7">Coldline Storage</option>
                     <option value="4">Archive Storage</option>
                   </select></td>
-                <td><strong>Cost Per TB ($)</strong><br><span display=inline><output style="float: right" id="coolgirl" name="coolgirl">26</output></span>
+                <td><strong>Cost Per TB</strong><br><span display=inline>=$<output id="coolgirl" name="coolgirl">26</output></span>
                 </td>
               </tr>
               <tr>
-                <td><strong>Cost Per Server ($)</strong><input type="range" max="500" min="1" id="custemerCostPerServers"
+                <td><strong>Cost Per Server</strong><input type="range" max="500" min="0" id="custemerCostPerServers"
                     name="c" value="250" oninput="fn1()">
-                  <output style="float: right" name="cc" for="custemerStorage">250</output></td>
+                  =$<output name="cc" for="custemerStorage">250</output></td>
               </tr>
               <tr>
-                <td><strong>Cost per TB ($)</strong><input type="range" id="custemerCostPerStorage" name="d" value="50"
+                <td><strong>Cost per TB</strong><input type="range" id="custemerCostPerStorage" name="d" value="50"
                     oninput="fn1()">
-                  <output style="float: right" name="dd" for="custemerStorage">50</output></td>
+                  =$<output name="dd" for="custemerStorage">50</output></td>
               </tr>
             </table>
           </form>
           <hr>
         </div>
         <div class="col-sm-5 text-left">
-          <h1>Outputs</h1>
-          <table class="table">
+          <h1>Cloud Savings Comparison</h1>
+          <table class="table table-striped table-bordered table-hover">
             <!--Table showing comparison of current costs and Cloud costs-->
             <tr>
               <th>Cost Comparison</th>
